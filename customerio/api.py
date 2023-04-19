@@ -30,7 +30,7 @@ class APIClient(ClientBase):
         return session
 
 class SendEmailRequest(object):
-    '''An object with all the options avaiable for triggering a transactional message'''
+    '''An object with all the options available for triggering a transactional message'''
     def __init__(self,
             transactional_message_id=None,
             to=None,
@@ -96,9 +96,9 @@ class SendEmailRequest(object):
         self.attachments[name] = content
 
     def _to_dict(self):
-        '''Build a request payload fromt the object'''
+        '''Build a request payload from the object'''
         field_map = dict(
-            # from is reservered keyword hence the object has the field
+            # from is a reserved keyword hence the object has the field
             # `_from` but in the request payload we map it to `from`
             _from="from",
             # field name is the same as the payload field name
